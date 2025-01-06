@@ -1,4 +1,4 @@
-package com.egov.loxanalyticsservice;
+package com.egov.fdaanalyticsservice;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;

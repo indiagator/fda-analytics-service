@@ -1,11 +1,9 @@
-package com.egov.loxanalyticsservice;
+package com.egov.fdaanalyticsservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.micrometer.core.instrument.Counter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -24,13 +22,24 @@ public class Consumer
    // @Autowired
     //Counter offer_counter;
 
+    @Autowired
+    ObjectMapper mapper;
+
     @KafkaListener(topics = "auth-events", groupId = "1")
     public void consumeAuthEvents(String message) throws IOException
     {
         //analytics_counter.increment();
-        ObjectMapper mapper  = new ObjectMapper();
         Analytic datum =  mapper.readValue(message,Analytic.class);
         logger.info(String.format("#### -> Consumed message -> %s", datum.getDescription()));
+    }
+
+    @KafkaListener(topics = "general-events", groupId = "1")
+    public void consumeGenEvents(String message) throws IOException
+    {
+        //analytics_counter.increment();
+        //ObjectMapper mapper  = new ObjectMapper();
+        //Analytic datum =  mapper.readValue(message,Analytic.class);
+        logger.info(String.format("#### -> Consumed message -> %s", message));
     }
 
 

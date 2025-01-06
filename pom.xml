@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.egov</groupId>
-    <artifactId>lox-analytics-service</artifactId>
+    <artifactId>fda-analytics-service</artifactId>
     <version>dev-1</version>
-    <name>lox-analytics-service</name>
-    <description>lox-analytics-service</description>
+    <name>fda-analytics-service</name>
+    <description>fda-analytics-service</description>
     <url/>
     <licenses>
         <license/>
@@ -66,6 +66,11 @@
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.15.3</version> <!-- Use appropriate version -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

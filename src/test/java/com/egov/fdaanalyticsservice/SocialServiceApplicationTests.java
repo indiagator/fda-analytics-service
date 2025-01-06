@@ -1,4 +1,4 @@
-package com.egov.loxanalyticsservice;
+package com.egov.fdaanalyticsservice;
 
 import org.springframework.boot.test.context.SpringBootTest;
 

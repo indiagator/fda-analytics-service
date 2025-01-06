@@ -1,4 +1,4 @@
-package com.egov.loxanalyticsservice;
+package com.egov.fdaanalyticsservice;
 
 
 import io.swagger.v3.oas.models.OpenAPI;

@@ -1,4 +1,4 @@
-package com.egov.loxanalyticsservice;
+package com.egov.fdaanalyticsservice;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.retry.RetryConfig;

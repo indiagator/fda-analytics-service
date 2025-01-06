@@ -1,4 +1,4 @@
-package com.egov.loxanalyticsservice;
+package com.egov.fdaanalyticsservice;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
